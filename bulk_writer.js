@@ -52,7 +52,7 @@ BulkWriter.prototype.flush = function() {
   var thiz = this;
   if (this.bulk.length === 0) {
     debug('nothing to flush');
-    return new Promise((resolve) => { return resolve(); });
+    return new Promise(function(resolve) { return resolve(); });
   }
 
   var bulk = this.bulk.concat();
