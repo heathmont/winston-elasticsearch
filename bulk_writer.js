@@ -29,7 +29,7 @@ BulkWriter.prototype.stop = function() {
 
 BulkWriter.prototype.schedule = function() {
   var thiz = this;
-  this.timer = setTimeout(() => {
+  this.timer = setTimeout(function() {
     thiz.tick();
   }, this.interval);
 };
@@ -39,10 +39,10 @@ BulkWriter.prototype.tick = function() {
   var thiz = this;
   if (!this.running) { return; }
   this.flush()
-  .catch((e) => {
+  .catch(function(e) {
     throw e;
   })
-  .then(() => {
+  .then(function() {
     thiz.schedule();
   });
 };
@@ -63,7 +63,7 @@ BulkWriter.prototype.flush = function() {
     consistency: this.consistency,
     timeout: this.interval + 'ms',
     type: this.type
-  }).catch((e) => {
+  }).catch(function(e) {
     // rollback this.bulk array
     thiz.bulk = bulk.concat(thiz.bulk);
     throw e;
