@@ -145,7 +145,7 @@ Elasticsearch.prototype.checkEsConnection = function() {
   return new Promise(function(fulfill, reject) {
     operation.attempt(function(currentAttempt) {
       thiz.client.ping().then(
-        function(res)> {
+        function(res) {
           thiz.esConnection = true;
           // Ensure mapping template is existing if desired
           if (thiz.options.ensureMappingTemplate) {
