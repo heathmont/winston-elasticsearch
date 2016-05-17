@@ -1,5 +1,5 @@
 {
-  "name": "@heathmont/winston-elasticsearch",
+  "name": "winston-elasticsearch-old-node",
   "version": "0.3.4",
   "description": "An Elasticsearch transport for winston",
   "main": "index",

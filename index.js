@@ -179,7 +179,7 @@ Elasticsearch.prototype.ensureMappingTemplate = function(fulfill, reject) {
   var thiz = this;
   var mappingTemplate = thiz.options.mappingTemplate;
   if (mappingTemplate === null || typeof mappingTemplate === 'undefined') {
-    mappingTemplate = require('index-template-mapping.json');
+    mappingTemplate = require('./index-template-mapping.json');
   }
   var tmplCheckMessage = {
     name: 'template_' + thiz.options.indexPrefix
