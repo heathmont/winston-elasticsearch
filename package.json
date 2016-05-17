@@ -1,6 +1,6 @@
 {
   "name": "winston-elasticsearch-old-node",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "An Elasticsearch transport for winston",
   "main": "index",
   "authors": [
